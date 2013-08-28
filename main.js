@@ -1,0 +1,1 @@
+NProgress = window.NProgress;
