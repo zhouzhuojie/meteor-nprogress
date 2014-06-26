@@ -1,4 +1,4 @@
-meteor-nprogress
+meteor-nprogress [![Build Status](https://travis-ci.org/zhouzhuojie/meteor-nprogress.svg?branch=master)](https://travis-ci.org/zhouzhuojie/meteor-nprogress)
 ================
 
 NProgress for Meteor
