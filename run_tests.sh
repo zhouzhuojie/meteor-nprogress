@@ -11,6 +11,12 @@ if [[ -d $DEST_PATH ]]; then
 fi
 mkdir -p $DEST_PATH
 
+METEOR_PACKAGE_FILE=$DEST_PATH/../../.meteor/packages
+if ! grep -Fxq "$PACKAGE_NAME" $METEOR_PACKAGE_FILE
+then
+  echo "$PACKAGE_NAME" >> $METEOR_PACKAGE_FILE
+fi
+
 cp -rf lib $DEST_PATH/lib
 cp package.js $DEST_PATH/package.js
 
