@@ -6,7 +6,7 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-  api.use('jquery', 'client');
+  api.use('jquery@1.0.0', 'client');
   api.add_files('lib/nprogress/nprogress.js', 'client');
   api.add_files('lib/nprogress/nprogress.css', 'client');
   api.add_files('lib/main.js', 'client');
