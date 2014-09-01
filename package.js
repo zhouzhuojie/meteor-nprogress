@@ -1,8 +1,11 @@
 Package.describe({
-  summary: "NProgress for Meteor"
+  summary: "NProgress for Meteor",
+  version: "0.1.0",
+  git: "https://github.com/zhouzhuojie/meteor-nprogress.git",
+  name: "mrt:nprogress"
 });
 
-Package.on_use(function (api) {
+Package.onUse(function (api) {
   api.use('jquery', 'client');
   api.add_files('lib/nprogress/nprogress.js', 'client');
   api.add_files('lib/nprogress/nprogress.css', 'client');
@@ -11,3 +14,14 @@ Package.on_use(function (api) {
     api.export('NProgress', 'client');
   }
 });
+
+if (Package.on_test) {
+  Package.on_test(function (api) {
+    if (Package.onTest) {
+      api.use(['mrt:nprogress@0.1.0', 'tinytest', 'test-helpers'], ['client']);
+    } else {
+      api.use(['nprogress', 'tinytest', 'test-helpers'], ['client']);
+    }
+    api.add_files('test-mrt:nprogress.js', ['client']);
+  });
+}
