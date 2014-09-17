@@ -3,6 +3,11 @@ meteor-nprogress [![Build Status](https://travis-ci.org/zhouzhuojie/meteor-nprog
 
 NProgress for Meteor
 
+Installation
+```
+meteor add mrt:nprogress
+```
+
 Basic usage
 -------------
 
